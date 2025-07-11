@@ -91,7 +91,7 @@ TEST(FibonacciTest, GenerateFirstFew) {
 TEST(FibonacciTest, GenerateUpToN) {
     unsigned long long n = 10;
     std::vector<unsigned long long> fib = generateFibonacci(n);
-    std::vector<unsigned long long> expected = {0, 1, 1, 2, 3, 5, 8};
+    std::vector<unsigned long long> expected = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
 
     EXPECT_EQ(fib.size(), expected.size());
     for (size_t i = 0; i < fib.size(); ++i) {
