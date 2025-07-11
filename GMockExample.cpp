@@ -11,10 +11,10 @@
 #include <stdexcept>
 #include <sstream>
 
-#include "../CPlusPlus/Dog.h"
-#include "../CPlusPlus/Cat.h"
-#include "../CPlusPlus/Zoo.h"
-#include "../CPlusPlus/fib.h"
+#include "../CPlusPlus/Dog.hpp"
+#include "../CPlusPlus/Cat.hpp"
+#include "../CPlusPlus/Zoo.hpp"
+#include "../CPlusPlus/Fib.hpp"
 
 // Capture std::cout output for testable output comparison
 class CoutRedirector {
