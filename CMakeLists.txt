@@ -1,33 +1,14 @@
-cmake_minimum_required(VERSION 3.14)
-project(Cpp14DemoTests)
+cmake_minimum_required(VERSION 3.15)
+project(NewerC++ReleasesDemo)
 
-# Enable testing framework
-enable_testing()
+set(CMAKE_CXX_STANDARD 20)
 
-# Use C++14
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(c++20 C++20.cpp)
 
-# Set GTest paths (change if you’re not using /opt/homebrew)
-set(GTEST_ROOT /opt/homebrew/opt/googletest)
+set(CMAKE_CXX_STANDARD 23)
 
-# Add include directories for GTest/GMock
-include_directories(${GTEST_ROOT}/include)
-link_directories(${GTEST_ROOT}/lib)
+add_executable(c++23 C++23.cpp)
 
-# Add your test source file
-add_executable(Cpp14DemoTests GMockExample.cpp)
+set(CMAKE_CXX_STANDARD 26)
 
-# Link against GTest, GMock, and pthread
-target_link_libraries(Cpp14DemoTests
-    gtest
-    gmock
-    gtest_main
-    pthread
-)
-
-# Enable CTest if desired
-add_test(NAME Cpp14DemoTests COMMAND Cpp14DemoTests)
-
-# Add your test source file
-add_executable(c++17  C++17.cpp)
+add_executable(c++26 C++26.cpp)
