@@ -5,7 +5,7 @@ project(Cpp14DemoTests)
 enable_testing()
 
 # Use C++14
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Set GTest paths (change if you’re not using /opt/homebrew)
@@ -16,7 +16,7 @@ include_directories(${GTEST_ROOT}/include)
 link_directories(${GTEST_ROOT}/lib)
 
 # Add your test source file
-add_executable(Cpp14DemoTests ../CPlusPlus/main.cpp)
+add_executable(Cpp14DemoTests GMockExample.cpp)
 
 # Link against GTest, GMock, and pthread
 target_link_libraries(Cpp14DemoTests
@@ -28,10 +28,6 @@ target_link_libraries(Cpp14DemoTests
 
 # Enable CTest if desired
 add_test(NAME Cpp14DemoTests COMMAND Cpp14DemoTests)
-
-# Use C++14
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Add your test source file
 add_executable(c++17  C++17.cpp)
